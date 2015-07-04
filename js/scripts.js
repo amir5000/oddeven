@@ -1,5 +1,9 @@
 (function() {
-	
+	var evenInputField	= $('#evenNumber');
+	var evenButton		= $('#calcEven');
+	var oddInputField	= $('#oddNumber');
+	var oddButton		= $('#calcOdd');
+
 	function addEvenNumbers(endNumber) {
 		var addingNumbers;
 		var total = 0;
@@ -36,17 +40,22 @@
 		return total;
 	}
 
-	var evenInputField = $('#evenNumber');
-	var oddInputField = $('#oddNumber');
-	evenInputField.on('change', function () {
+	function evenListener() {
 		var numberValue = evenInputField.val();
 		var totalFromEvenNumbers = addEvenNumbers(numberValue);
-		$('#evenTotal').html('<p>Total: ' + totalFromEvenNumbers + '</p>');
-	});
-	oddInputField.on('change', function () {
+		$('#evenTotal p').html('Total: ' + totalFromEvenNumbers);
+	}
+
+	function oddListener() {
 		var numberValue = oddInputField.val();
 		var totalFromEvenNumbers = addOddNumbers(numberValue);
-		$('#oddTotal').html('<p>Total: ' + totalFromEvenNumbers + '</p>');
-	});
+		$('#oddTotal p').html('Total: ' + totalFromEvenNumbers);
+	}
+
+	
+	evenInputField.on('change', evenListener);
+	evenButton.on('click', evenListener);
+	oddInputField.on('change', oddListener);
+	oddButton.on('click', oddListener);
 
 })();

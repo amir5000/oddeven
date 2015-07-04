@@ -5,19 +5,28 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 	<style type="text/css">
 		input {
-			margin-left: 20px;
+			margin: 0 20px;
+		}
+		.inline-block {
+			display: inline-block;
 		}
 	</style>
 </head>
 <body>
 
 <div class="container jumbotron">
-	<p class="pull-left">Add all the even numbers that are between 0 and </p>
-	<input class="pull-left" type="text" id="evenNumber" maxlength="4" />
-	<div id="evenTotal" class="pull-right"><p>Total: 0</p></div>
-	<p class="pull-left">Add all the odd numbers that are between 0 and </p>
-	<input class="pull-left" type="text" id="oddNumber" maxlength="4" />
-	<div id="oddTotal" class="pull-right"><p>Total: 0</p></div>
+	<p class="inline-block">Add all the even numbers that are between 0 and </p>
+	<input class="inline-block" type="text" id="evenNumber" maxlength="4" />
+	<button class="btn btn-primary" id="calcEven">Calculate</button>
+	<div id="evenTotal">
+		<p>Total: 0</p>
+	</div>
+	<p class="inline-block">Add all the odd numbers that are between 0 and </p>
+	<input class="inline-block" type="text" id="oddNumber" maxlength="4" />
+	<button class="btn btn-primary" id="calcOdd">Calculate</button>
+	<div id="oddTotal">
+		<p>Total: 0</p>
+	</div>
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
