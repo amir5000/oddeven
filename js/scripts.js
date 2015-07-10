@@ -17,7 +17,7 @@
 				} 
 			}
 		} else {
-			alert('Enter a number!');
+			alert('Enter a number please!');
 		}
 		return total;
 	}
@@ -35,7 +35,7 @@
 				} 
 			}
 		} else {
-			alert('Enter a number!');
+			alert('Enter a number please!');
 		}	
 		return total;
 	}
