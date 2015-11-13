@@ -10,9 +10,7 @@
 			for (var i = 1; i <= endNumber; i++) {
 				addingNumbers = i;
 				if (addingNumbers % 2 !== 1) {
-					console.log('This is an even number: ' + addingNumbers);
 					total = total + addingNumbers;
-					console.log('This is the total so far: ' + total);
 				} 
 			}
 		} else {
@@ -27,9 +25,7 @@
 			for (var i = 1; i <= endNumber; i++) {
 				addingNumbers = i;
 				if (addingNumbers % 2 === 1) {
-					console.log('This is an odd number: ' + addingNumbers);
 					total = total + addingNumbers;
-					console.log('This is the total so far: ' + total);
 				} 
 			}
 		} else {
@@ -47,8 +43,6 @@
 		var totalFromEvenNumbers = addOddNumbers(numberValue);
 		$('#oddTotal p').html('Total: ' + totalFromEvenNumbers);
 	}
-	evenInputField.on('change', evenListener);
-	evenButton.on('click', evenListener);
-	oddInputField.on('change', oddListener);
+	evenButton.on('click', evenListener);3
 	oddButton.on('click', oddListener);
 })();
