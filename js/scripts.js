@@ -7,8 +7,6 @@
 	var oddButton		= $('#calcOdd');
 	var evenTotalP		= $('#evenTotal p');
 	var oddTotalP		= $('#oddTotal p');
-	var messageEven		= $('#message-even');
-	var messageOdd		= $('#message-odd');
 	function addEvenNumbers(endNumber) {
 		var addingNumbers;
 		var total = 0;
@@ -21,12 +19,13 @@
 					total = total + addingNumbers;
 				} 
 			}
+			return total;
 		} else {
 			evenContainer.addClass('has-error');
 			evenInputField.focus();
-			messageEven.html('<p class="error-message">"' + evenInputField.val() + '" is not a valid number</p>');
+			return '<span class="error-message">"' + evenInputField.val() + '" is not a valid number</span>';
 		}
-		return total;
+		
 	}
 	function addOddNumbers(endNumber) {
 		var addingNumbers;
@@ -40,12 +39,13 @@
 					total = total + addingNumbers;
 				} 
 			}
+			return total;
 		} else {
 			oddContainer.addClass('has-error');
 			oddInputField.focus();
-			messageOdd.html('<p class="error-message">"' + oddInputField.val() + '" is not a valid number</p>');
+			return '<span class="error-message">"' + evenInputField.val() + '" is not a valid number</span>';
 		}	
-		return total;
+		
 	}
 	function evenListener() {
 		var numberValue = evenInputField.val();
