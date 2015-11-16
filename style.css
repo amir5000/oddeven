@@ -1,17 +1,18 @@
 input {
 	margin: 0 20px;
 }
+
 .inline-block {
 	display: inline-block;
 }
 
-.error {
-	border-color: red;
+.form-group {
+    display: inline;
 }
 
-.error:focus {
-    box-shadow: 0 0 5px red;
-	border: 1px solid red;
+.form-control {
+	width: 200px;
+	display: inline-block;
 }
 
 p.error-message {

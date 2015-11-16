@@ -1,4 +1,6 @@
 (function() {
+	var evenContainer	= $('#even');
+	var oddContainer	= $('#odd');
 	var evenInputField	= $('#evenNumber');
 	var evenButton		= $('#calcEven');
 	var oddInputField	= $('#oddNumber');
@@ -12,7 +14,7 @@
 		var total = 0;
 		if (!isNaN(endNumber) && endNumber !== '' ) {
 			messageEven.html('');
-			evenInputField.removeClass('error');
+			evenContainer.removeClass('has-error');
 			for (var i = 1; i <= endNumber; i++) {
 				addingNumbers = i;
 				if (addingNumbers % 2 !== 1) {
@@ -20,7 +22,7 @@
 				} 
 			}
 		} else {
-			evenInputField.addClass('error');
+			evenContainer.addClass('has-error');
 			evenInputField.focus();
 			messageEven.html('<p class="error-message">"' + evenInputField.val() + '" is not a valid number</p>');
 		}
@@ -31,7 +33,7 @@
 		var total = 0;
 		if (!isNaN(endNumber) && endNumber !== '' ) {
 			messageEven.html('');
-			evenInputField.removeClass('error');
+			oddContainer.removeClass('has-error');
 			for (var i = 1; i <= endNumber; i++) {
 				addingNumbers = i;
 				if (addingNumbers % 2 === 1) {
@@ -39,7 +41,7 @@
 				} 
 			}
 		} else {
-			oddInputField.addClass('error');
+			oddContainer.addClass('has-error');
 			oddInputField.focus();
 			messageOdd.html('<p class="error-message">"' + oddInputField.val() + '" is not a valid number</p>');
 		}	
