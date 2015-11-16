@@ -45,6 +45,6 @@
 		var totalFromEvenNumbers = addOddNumbers(numberValue);
 		oddTotalP.html('Total: ' + totalFromEvenNumbers);
 	}
-	evenButton.on('click', evenListener);3
+	evenButton.on('click', evenListener);
 	oddButton.on('click', oddListener);
 })();
