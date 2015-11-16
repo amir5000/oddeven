@@ -3,6 +3,8 @@
 	var evenButton		= $('#calcEven');
 	var oddInputField	= $('#oddNumber');
 	var oddButton		= $('#calcOdd');
+	var evenTotalP		= $('#evenTotal p');
+	var oddTotalP		= $('#oddTotal p');
 	function addEvenNumbers(endNumber) {
 		var addingNumbers;
 		var total = 0;
@@ -36,12 +38,12 @@
 	function evenListener() {
 		var numberValue = evenInputField.val();
 		var totalFromEvenNumbers = addEvenNumbers(numberValue);
-		$('#evenTotal p').html('Total: ' + totalFromEvenNumbers);
+		evenTotalP.html('Total: ' + totalFromEvenNumbers);
 	}
 	function oddListener() {
 		var numberValue = oddInputField.val();
 		var totalFromEvenNumbers = addOddNumbers(numberValue);
-		$('#oddTotal p').html('Total: ' + totalFromEvenNumbers);
+		oddTotalP.html('Total: ' + totalFromEvenNumbers);
 	}
 	evenButton.on('click', evenListener);3
 	oddButton.on('click', oddListener);
