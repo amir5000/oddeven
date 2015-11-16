@@ -6,10 +6,6 @@ input {
 	display: inline-block;
 }
 
-.has-error input {
-	border: 1px solid red;
-}
-
 .form-group {
     display: inline;
 }
