@@ -11,7 +11,7 @@
 		var addingNumbers;
 		var total = 0;
 		if (!isNaN(endNumber) && endNumber !== '' ) {
-			evenContainer.removeClass('has-error');
+			evenContainer.removeClass('has-error has-feedback');
 			for (var i = 1; i <= endNumber; i++) {
 				addingNumbers = i;
 				if (addingNumbers % 2 !== 1) {
@@ -20,7 +20,7 @@
 			}
 			return total;
 		} else {
-			evenContainer.addClass('has-error');
+			evenContainer.addClass('has-error has-feedback');
 			evenInputField.focus();
 			return '<span class="error-message">"' + evenInputField.val() + '" is not a valid number</span>';
 		}
@@ -30,7 +30,7 @@
 		var addingNumbers;
 		var total = 0;
 		if (!isNaN(endNumber) && endNumber !== '' ) {
-			oddContainer.removeClass('has-error');
+			oddContainer.removeClass('has-error has-feedback');
 			for (var i = 1; i <= endNumber; i++) {
 				addingNumbers = i;
 				if (addingNumbers % 2 === 1) {
@@ -39,7 +39,7 @@
 			}
 			return total;
 		} else {
-			oddContainer.addClass('has-error');
+			oddContainer.addClass('has-error has-feedback');
 			oddInputField.focus();
 			return '<span class="error-message">"' + evenInputField.val() + '" is not a valid number</span>';
 		}	

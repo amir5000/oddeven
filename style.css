@@ -15,6 +15,17 @@ input {
 	display: inline-block;
 }
 
+.form-control-feedback {
+	top: -10px;
+    right: 25px;
+    display: none;
+}
+
+.has-feedback .form-control-feedback {
+	display: block;
+}
+    
+
 span.error-message {
 	font-size: 14px;
 	font-style: italic;
