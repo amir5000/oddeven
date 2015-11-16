@@ -11,7 +11,6 @@
 		var addingNumbers;
 		var total = 0;
 		if (!isNaN(endNumber) && endNumber !== '' ) {
-			messageEven.html('');
 			evenContainer.removeClass('has-error');
 			for (var i = 1; i <= endNumber; i++) {
 				addingNumbers = i;
@@ -31,7 +30,6 @@
 		var addingNumbers;
 		var total = 0;
 		if (!isNaN(endNumber) && endNumber !== '' ) {
-			messageEven.html('');
 			oddContainer.removeClass('has-error');
 			for (var i = 1; i <= endNumber; i++) {
 				addingNumbers = i;
