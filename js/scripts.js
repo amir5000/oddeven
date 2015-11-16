@@ -21,7 +21,8 @@
 			}
 		} else {
 			evenInputField.addClass('error');
-			messageEven.html('<p>"' + evenInputField.val() + '" is not a valid number</p>');
+			evenInputField.focus();
+			messageEven.html('<p class="error-message">"' + evenInputField.val() + '" is not a valid number</p>');
 		}
 		return total;
 	}
@@ -29,6 +30,8 @@
 		var addingNumbers;
 		var total = 0;
 		if (!isNaN(endNumber) && endNumber !== '' ) {
+			messageEven.html('');
+			evenInputField.removeClass('error');
 			for (var i = 1; i <= endNumber; i++) {
 				addingNumbers = i;
 				if (addingNumbers % 2 === 1) {
@@ -36,7 +39,9 @@
 				} 
 			}
 		} else {
-			alert('Enter a number please!');
+			oddInputField.addClass('error');
+			oddInputField.focus();
+			messageOdd.html('<p class="error-message">"' + oddInputField.val() + '" is not a valid number</p>');
 		}	
 		return total;
 	}

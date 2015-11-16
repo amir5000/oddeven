@@ -1,0 +1,19 @@
+input {
+	margin: 0 20px;
+}
+.inline-block {
+	display: inline-block;
+}
+
+.error {
+	border-color: red;
+}
+
+.error:focus {
+    outline:red auto 5px;
+}
+
+p.error-message {
+	font-size: 14px;
+	font-style: italic;
+}
