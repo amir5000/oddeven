@@ -22,7 +22,7 @@
 		} else {
 			evenContainer.addClass('has-error has-feedback');
 			evenInputField.focus();
-			return '<span class="error-message">"' + evenInputField.val() + '" is not a valid number</span>';
+			return '<span class="error-message">"' + evenInputField.val() + '" is not a number</span>';
 		}
 		
 	}
@@ -41,7 +41,7 @@
 		} else {
 			oddContainer.addClass('has-error has-feedback');
 			oddInputField.focus();
-			return '<span class="error-message">"' + evenInputField.val() + '" is not a valid number</span>';
+			return '<span class="error-message">"' + evenInputField.val() + '" is not a number</span>';
 		}	
 		
 	}
